@@ -5,7 +5,7 @@ Users can view product cards, adjust quantity, and see error messages if they ex
 
 ## Features
 
-- Product card with image, name, price, MRP, and discount
+- Product card with image, name, price
 - Quantity adjustment buttons (+, -, <<, >>)
 - "Add" button with green color (`#328616`)
 - Maximum quantity limit per order (shows error if exceeded)
@@ -55,7 +55,7 @@ src/
 
 ## Usage
 
-- On the homepage, you’ll see a product card.
+- On the homepage, you’ll see a list of product card.
 - Click "Add" to add the product to your order.
 - Use +, -, <<, >> to adjust the quantity.
 - If you try to add more than the maximum allowed (default: 10), you’ll see:  
