@@ -25,7 +25,7 @@ const ProductCard = ({
       <h2 className="text-lg font-semibold text-center">{product.name}</h2>
       <div className="mt-2 flex gap-2 items-center">
         <span className="text-xl font-bold">₹{product.price}</span>
-        <span className="text-gray-500 line-through text-sm">₹{product.mrp}</span>
+        {/* <span className="text-gray-500 line-through text-sm">₹{product.mrp}</span> */}
         <span className="text-green-600 text-sm">{product.discount}</span>
       </div>
 
