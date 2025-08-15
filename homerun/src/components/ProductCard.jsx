@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const ProductCard = ({
   product,
@@ -8,6 +7,17 @@ const ProductCard = ({
   maxLimit,
 }) => {
   const isMax = quantity >= maxLimit;
+  const [error, setError] = useState('');
+
+  // Handler for increment actions
+  const handleAdd = (delta) => {
+    if (quantity + delta > maxLimit) {
+      setError('Maximum 10 allowed per order. Please place another order if required.');
+    } else {
+      setError('');
+      changeQty(product.id, delta);
+    }
+  };
 
   return (
     <div className="border rounded-lg p-4 flex flex-col items-center shadow hover:shadow-lg transition">
@@ -37,14 +47,14 @@ const ProductCard = ({
           </button>
           <span className="px-3">{quantity}</span>
           <button
-            onClick={() => changeQty(product.id, +1)}
+            onClick={() => handleAdd(1)}
             className="px-2 py-1 bg-gray-200 rounded disabled:opacity-50"
             disabled={isMax}
           >
             +
           </button>
           <button
-            onClick={() => changeQty(product.id, +5)}
+            onClick={() => handleAdd(5)}
             className="px-2 py-1 bg-gray-200 rounded disabled:opacity-50"
             disabled={isMax}
           >
@@ -53,16 +63,20 @@ const ProductCard = ({
         </div>
       ) : (
         <button
-          onClick={() => changeQty(product.id, 1)}
+          onClick={() => handleAdd(1)}
           className="mt-4 px-6 py-2 rounded bg-[#328616] text-white hover:bg-green-700"
+          style={{ backgroundColor: '#328616' }}
         >
           Add
         </button>
+      )}
+      {error && (
+        <div className="mt-2 text-red-600 text-sm text-center">
+          {error}
+        </div>
       )}
     </div>
   );
 };
 
-// export default ProductCard;
-
-export default ProductCard
+export default ProductCard;

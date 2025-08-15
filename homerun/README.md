@@ -1,12 +1,73 @@
-# React + Vite
+# Homerun Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based product order UI.  
+Users can view product cards, adjust quantity, and see error messages if they exceed the allowed limit.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Product card with image, name, price, MRP, and discount
+- Quantity adjustment buttons (+, -, <<, >>)
+- "Add" button with green color (`#328616`)
+- Maximum quantity limit per order (shows error if exceeded)
+- Responsive and clean UI
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or above recommended)
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <your-repo-url>
+   cd Homerun_assignment/homerun
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The app will run at [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+## Project Structure
+
+```
+src/
+  components/
+    ProductCard.jsx
+  pages/
+    HomePage.jsx
+  assets/
+    cement.jpg
+  App.jsx
+  main.jsx
+```
+
+## Usage
+
+- On the homepage, you’ll see a product card.
+- Click "Add" to add the product to your order.
+- Use +, -, <<, >> to adjust the quantity.
+- If you try to add more than the maximum allowed (default: 10), you’ll see:  
+  **"Maximum 10 allowed per order. Please place another order if required."**
+
+## Customization
+
+- To change the product, edit `HomePage.jsx`.
+- To change the maximum allowed quantity, update the `maxLimit` prop in `HomePage.jsx`.
+
+## License
+
+MIT
+
+---
