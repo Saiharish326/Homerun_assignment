@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "UltraTech Cement OPC 53 Grade",
+    "price": 350,
+    "mrp": 400,
+    "discount": "12%",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "name": "ACC Gold Cement",
+    "price": 340,
+    "mrp": 390,
+    "discount": "13%",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 3,
+    "name": "Ambuja Cement PPC",
+    "price": 330,
+    "mrp": 380,
+    "discount": "13%",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 4,
+    "name": "Shree Jung Rodhak Cement",
+    "price": 345,
+    "mrp": 395,
+    "discount": "12%",
+    "image": "https://via.placeholder.com/150"
+  }
+]
